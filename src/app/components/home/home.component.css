@@ -1,0 +1,27 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+h1{
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.card{
+    border-radius: 3%;
+    min-width: 32rem;
+    min-height: 16rem;
+    border: solid 1px white;
+    background-color: white;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    background-image: url('../../../assets/vidipexeles.jpg');
+}
+.card-body{
+    border-radius: 3%;
+}

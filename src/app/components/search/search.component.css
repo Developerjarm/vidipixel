@@ -1,0 +1,33 @@
+*{
+    color: black;
+    text-align: center;
+}
+h1{
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.container1{
+    height: 80vh;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    place-content: center;
+    background-image: url('../../../assets/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container2{
+   width: 100%;
+   z-index: 1;
+}
+.containerSearch{
+    z-index: 2;
+}
+img{
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    z-index: 1;
+}
+
