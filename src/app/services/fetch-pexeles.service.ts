@@ -13,8 +13,8 @@ export class FetchPexelesService {
 
   constructor( private http: HttpClient) { }
 
-  searchPexeles(query: string,perPage: number = 100,page: number): Observable<any> {
-    const url = `${this.apiUrl}/search?query=${encodeURIComponent(query)}&page=${page}&per_page=${perPage}`;
+  searchPexeles(query: string,page: number): Observable<any> {
+    const url = `${this.apiUrl}/search?query=${encodeURIComponent(query)}&page=${page}&per_page=100`;
     const headers = new HttpHeaders({
       Authorization: this.apiKey 
     });

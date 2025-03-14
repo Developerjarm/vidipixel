@@ -9,34 +9,76 @@
           type="text"
           id="input-example-1"
           placeholder="Ingresa tu tema de búsqueda"
+          [(ngModel)]="tittleSearch"
         />
-        <button class="btn btn-primary button-search">Buscar</button>
-      </div>
+        <button
+          type="button"
+          class="btn btn-primary button-search"
+          (click)="searchPhoto()"
+        >
+          Buscar
+        </button>
+      </div >
     </section>
-    <section class="container2 animate__animated">
+    <section class="container2" *ngIf="!visible" id="container2">
       <h1>Acá tenemos algunas fotos</h1>
       <div class="grid-container">
-        <div class="grid-item" *ngFor="let image of pexeles" [style.backgroundColor]="image.avg_color">
+        <div
+          class="grid-item"
+          *ngFor="let image of pexeles"
+          [style.backgroundColor]="image.avg_color"
+        >
           <a [href]="image.url" target="_blank">
-            <img 
-              [src]="image.src?.landscape" 
+            <img
+              [src]="image.src?.landscape"
               [alt]="image.alt"
-              [title]="image.alt">
+              [title]="image.alt"
+            />
           </a>
           <div class="image-info">
             <p class="title">🖼 {{ image.alt }}</p>
             <p class="photographer">📷 Fotografía: {{ image.photographer }}</p>
             <p class="color">🎨 Color: {{ image.avg_color }}</p>
-            <p class="Tamaño">📏 Tamaño: {{ image.width }} x {{ image.height }}</p>
+            <p class="Tamaño">
+              📏 Tamaño: {{ image.width }} x {{ image.height }}
+            </p>
           </div>
         </div>
       </div>
-    </section><div class="btn-group btn-group-block">
+      <div class="btn-group btn-group-block">
         <button class="btn" (click)="backPage()"><</button>
         <button class="btn" (click)="nextPage()">></button>
-      </div> 
-    <section class="container3">
-
+      </div>
+    </section>
+    <section class="container3" *ngIf="visible" id="container3">
+      <h1>resultados</h1>
+      <div class="grid-container">
+        <div
+          class="grid-item"
+          *ngFor="let image of pexelesSearch"
+          [style.backgroundColor]="image.avg_color"
+        >
+          <a [href]="image.url" target="_blank">
+            <img
+              [src]="image.src?.landscape"
+              [alt]="image.alt"
+              [title]="image.alt"
+            />
+          </a>
+          <div class="image-info">
+            <p class="title">🖼 {{ image.alt }}</p>
+            <p class="photographer">📷 Fotografía: {{ image.photographer }}</p>
+            <p class="color">🎨 Color: {{ image.avg_color }}</p>
+            <p class="Tamaño">
+              📏 Tamaño: {{ image.width }} x {{ image.height }}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group btn-group-block">
+        <button class="btn" (click)="backPageSearch()"><</button>
+        <button class="btn" (click)="nextPageSearch()">></button>
+      </div>
     </section>
   </main>
 </div>
