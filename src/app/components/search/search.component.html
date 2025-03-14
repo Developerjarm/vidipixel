@@ -1,17 +1,42 @@
-<div> 
-        <main>
-            <section class="container1">
-                <span class="h1">Busca tu foto favorita</span>
-                <div class="form-group">
-                    <label class="form-label" for="input-example-1"></label>
-                    <input class="form-input" type="text" id="input-example-1" placeholder="Ingresa tu tema de búsqueda">
-                  </div>
-            </section>
-            <section class="containerSearch">
-                <h1>Resultados</h1>
-                </section>
-            <section class="container2">
-                <h1>Busca tu foto</h1>
-            </section>
-        </main>
+<div>
+  <main>
+    <section class="container1 animate__animated animate__jackInTheBox">
+      <span class="h1">Busca tu foto favorita</span>
+      <div class="form-group">
+        <label class="form-label" for="input-example-1"></label>
+        <input
+          class="form-input"
+          type="text"
+          id="input-example-1"
+          placeholder="Ingresa tu tema de búsqueda"
+        />
+        <button class="btn btn-primary button-search">Buscar</button>
+      </div>
+    </section>
+    <section class="container2 animate__animated">
+      <h1>Acá tenemos algunas fotos</h1>
+      <div class="grid-container">
+        <div class="grid-item" *ngFor="let image of pexeles" [style.backgroundColor]="image.avg_color">
+          <a [href]="image.url" target="_blank">
+            <img 
+              [src]="image.src?.landscape" 
+              [alt]="image.alt"
+              [title]="image.alt">
+          </a>
+          <div class="image-info">
+            <p class="title">🖼 {{ image.alt }}</p>
+            <p class="photographer">📷 Fotografía: {{ image.photographer }}</p>
+            <p class="color">🎨 Color: {{ image.avg_color }}</p>
+            <p class="Tamaño">📏 Tamaño: {{ image.width }} x {{ image.height }}</p>
+          </div>
+        </div>
+      </div>
+    </section><div class="btn-group btn-group-block">
+        <button class="btn" (click)="backPage()"><</button>
+        <button class="btn" (click)="nextPage()">></button>
+      </div> 
+    <section class="container3">
+
+    </section>
+  </main>
 </div>
