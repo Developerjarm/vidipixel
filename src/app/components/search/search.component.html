@@ -10,6 +10,8 @@
           id="input-example-1"
           placeholder="Ingresa tu tema de búsqueda"
           [(ngModel)]="tittleSearch"
+          
+          (ngModelChange)="searchPhotoSuggestions()"
         />
         <button
           type="button"

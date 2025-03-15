@@ -23,9 +23,6 @@ h1{
    z-index: 1;
 }
 .container3{
-    display: grid;
-    min-width: 10%;
-    place-content: center;
     width: 100%;
     z-index: 1;
 }
