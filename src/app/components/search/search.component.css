@@ -2,7 +2,7 @@
     color: black;
     text-align: center;
 }
-h1{
+h1,span{
     font-family: "Satisfy", cursive;
     font-weight: 400;
     font-style: normal;
