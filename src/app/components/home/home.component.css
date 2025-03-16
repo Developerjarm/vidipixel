@@ -4,16 +4,19 @@
     display: grid;
     place-content: center;
     text-align: center;
+    background-image: url('../../../assets/fondosvg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 h1{
     font-family: "Satisfy", cursive;
     font-weight: 400;
     font-style: normal;
 }
-
 .card{
     border-radius: 3%;
-    min-width: 32rem;
+    min-width: 15rem;
     min-height: 16rem;
     border: solid 1px white;
     background-color: white;
@@ -21,7 +24,16 @@ h1{
     place-content: center;
     text-align: center;
     background-image: url('../../../assets/vidipexeles.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
 }
 .card-body{
     border-radius: 3%;
 }
+svg{
+    z-index: 1000;
+}
+
+
+
